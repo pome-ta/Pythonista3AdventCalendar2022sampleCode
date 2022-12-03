@@ -20,3 +20,7 @@
       - 簡単な説明
     - [code name](#)
       - 簡単な説明
+
+|day|code|title|
+|[day00](./day00/)|[qiitaAPIv2.py](./day00/qiitaAPIv2.py)|[Qiita API v2 でPythonista(3) の記事を取得する（Pythonista3 Advent Calendar 2022 前夜祭0日目） - Qiita](https://qiita.com/pome-ta/items/74afb37769173dab8c6c)|
+||[qiitaAPIv2.py](./day00/qiitaAPIv2.py)|[Qiita API v2 でPythonista(3) の記事を取得する（Pythonista3 Advent Calendar 2022 前夜祭0日目） - Qiita](https://qiita.com/pome-ta/items/74afb37769173dab8c6c)|
