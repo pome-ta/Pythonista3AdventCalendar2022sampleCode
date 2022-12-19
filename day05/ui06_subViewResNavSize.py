@@ -14,10 +14,9 @@ class MainView(ui.View):
     _, _, sub_width, sub_height = self.sub.frame
     sub_x = main_width / 2 - sub_width / 2 - main_x / 2
     sub_y = main_height / 2 - sub_height / 2 - main_y / 2
-    
+
     self.sub.x = sub_x
     self.sub.y = sub_y
-    
 
 
 if __name__ == '__main__':

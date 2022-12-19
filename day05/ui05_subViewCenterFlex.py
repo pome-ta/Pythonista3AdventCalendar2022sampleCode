@@ -11,7 +11,7 @@ class MainView(ui.View):
     self.add_subview(self.sub)
 
 
-
 if __name__ == '__main__':
   main_view = MainView()
   main_view.present(style='fullscreen', orientations=['portrait'])
+
