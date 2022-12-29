@@ -6,6 +6,8 @@
 
 ## リンク先一覧
 
+(テーブル形式が面倒で)更新中・・・
+
 |Day|記事リンク|Sample Code|概要|対応リンク|
 |---|---|---|---|---|
 |[day00](./day00/)|[Qiita API v2 でPythonista(3) の記事を取得する（Pythonista3 Advent Calendar 2022 前夜祭0日目） - Qiita](https://qiita.com/pome-ta/items/74afb37769173dab8c6c)|[qiitaAPIv2.py](./day00/qiitaAPIv2.py)|tag 検索をし取得|[Qiita API v2 から、Pythonista3 タグ記事を集める](https://qiita.com/pome-ta/items/74afb37769173dab8c6c#qiita-api-v2-%E3%81%8B%E3%82%89pythonista3-%E3%82%BF%E3%82%B0%E8%A8%98%E4%BA%8B%E3%82%92%E9%9B%86%E3%82%81%E3%82%8B)|
