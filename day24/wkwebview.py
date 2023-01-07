@@ -736,4 +736,3 @@ if __name__ == '__main__':
     #    no_cache=False, timeout=5)
     #v.load_url('file://some/local/file.html')
     v.clear_cache()
-

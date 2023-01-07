@@ -59,4 +59,3 @@ if __name__ == '__main__':
 
   view = View(entry_point, save_uri)
   view.present(style='fullscreen', orientations=['portrait'])
-
