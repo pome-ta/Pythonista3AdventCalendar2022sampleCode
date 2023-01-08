@@ -34,3 +34,17 @@
 |[day23](./day23/)|[Pythonista3 と機械学習（Core ML） のVision Framework で、手を追っかけてもらう - Qiita](https://qiita.com/pome-ta/items/bcac9d3209caa60f70b6)|
 |[day24](./day24/)|[WKWebView からPythonista3 でJavaScript とお戯れあそばせ - Qiita](https://qiita.com/pome-ta/items/52053dd6c9e39da6a29a)|
 |[day25](./day25/)|[Pythonista3（WKWebView） とJavaScript の愛と友情のツープラトン 〜 コード間でのデータ受け渡し 〜。GLSL で遊ぶで！ - Qiita](https://qiita.com/pome-ta/items/d0a21d40731644c696fd)|
+
+## todo
+
+- [x] アドカレ上のコードをリポジトリに入れる
+  - [ ] 対応ファイル命名
+- [ ] README.md に一覧を出す
+- [ ] 記事と日付と内容のリンク
+  - [x] 視覚的
+    - ディレクトリに使用モジュールなど情報をつけた
+  - [ ] 感覚的
+
+### メモ
+
+[Google Sheets -> Markdown: 一番便利な変換サイトを見つけた！ – 回れ右の内輪差](https://lookbackmargin.blog/2021/08/26/google-sheets-markdown/)
