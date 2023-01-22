@@ -97,6 +97,7 @@ class FileTreeNode(TreeNode):
     children = []
     for filename in files:
       if filename.startswith('.'):
+        # dot Files pass
         continue
       full_path = os.path.join(self.path, filename)
       node = FileTreeNode(full_path, self.show_size, self.select_dirs,
