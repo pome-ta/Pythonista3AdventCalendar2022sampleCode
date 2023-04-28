@@ -27,6 +27,7 @@ SCNFloor = ObjCClass('SCNFloor')
 
 
 class GameScene:
+
   def __init__(self):
     self.scene: SCNScene
     self.setUpScene()
@@ -74,6 +75,7 @@ class GameScene:
 
 
 class View(ui.View):
+
   def __init__(self, *args, **kwargs):
     ui.View.__init__(self, *args, **kwargs)
     self.name = ''
@@ -129,3 +131,4 @@ class View(ui.View):
 if __name__ == '__main__':
   view = View()
   view.present(style='fullscreen', orientations=['portrait'])
+
