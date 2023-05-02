@@ -1,11 +1,14 @@
 # Pythonista3AdventCalendar2022sampleCode
 
 
-:::note warn
 
-注意
+
+## 注意
+
 Pythonista3 v3.4 update により、落ちるスクリプトを確認しています。ただいま、修正方法調整中です。
-:::
+
+> 2023/05/03 現在
+
 
 このリポジトリは、[Pythonista3 Advent Calendar 2022](https://qiita.com/advent-calendar/2022/pythonista3) のサンプルコードをまとめています。
 
