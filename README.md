@@ -1,8 +1,6 @@
 # Pythonista3AdventCalendar2022sampleCode
 
 
-
-
 ## 注意
 
 Pythonista3 v3.4 update により、落ちるスクリプトを確認しています。ただいま、修正方法調整中です。
