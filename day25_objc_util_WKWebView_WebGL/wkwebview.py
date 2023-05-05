@@ -1,11 +1,16 @@
 #coding: utf-8
+
+# [WKWebView - modern webview for Pythonista](https://gist.github.com/sbbosco/1290f59d79c6963e62bb678f0f05b035)
+
 '''
 WKWebView - modern webview for Pythonista
+modified version of https://github.com/mikaelho/pythonista-webview
+updated for pythonista 3.4 compatibility
 '''
 
-__version__ = '1.0'
+__version__ = '1.1'
 
-from objc_util import *
+from objc_util import  *
 import ui, console, webbrowser
 import queue, weakref, ctypes, functools, time, os, json, re
 from types import SimpleNamespace
@@ -61,6 +66,9 @@ class WKWebView(ui.View):
             airplay_media=True,
             pip_media=True,
             **kwargs):
+
+        dummy = self.dummy_webview()
+        del dummy
 
         WKWebView.webviews.append(self)
         self.delegate = None
@@ -126,6 +134,10 @@ class WKWebView(ui.View):
         self.webview.setUIDelegate_(ui_delegate)
         self.objc_instance.addSubview_(self.webview)
 
+    @on_main_thread
+    def dummy_webview(self):
+        dummy1 = WKWebView.WKWebView.alloc().initWithFrame_(((0,0), (100, 100))).autorelease()
+
     def layout(self):
         if self.respect_safe_areas:
             self.update_safe_area_insets()
@@ -134,10 +146,13 @@ class WKWebView(ui.View):
     def load_url(self, url, no_cache=False, timeout=10):
         """ Loads the contents of the given url
         asynchronously.
+
         If the url starts with `file://`, loads a local file. If the remaining
         url starts with `/`, path starts from Pythonista root.
+
         For remote (non-file) requests, there are
         two additional options:
+
           * Set `no_cache` to `True` to skip the local cache, default is `False`
           * Set `timeout` to a specific timeout value, default is 10 (seconds)
         """
@@ -178,11 +193,11 @@ class WKWebView(ui.View):
 
     evaluate_javascript = eval_js
 
-    @on_main_thread
+    #@on_main_thread
     def _eval_js_sync_callback(self, value):
         self.eval_js_queue.put(value)
 
-    @on_main_thread
+    #@on_main_thread
     def eval_js_async(self, js, callback=None):
         if self.log_js_evals:
             self.console.message({'level': 'code', 'content': js})
@@ -193,6 +208,7 @@ class WKWebView(ui.View):
         retain_global(block)
         self.webview.evaluateJavaScript_completionHandler_(js, block)
 
+    @ui.in_background
     def clear_cache(self, completion_handler=None):
         store = WKWebView.WKWebsiteDataStore.defaultDataStore()
         data_types = WKWebView.WKWebsiteDataStore.allWebsiteDataTypes()
@@ -395,7 +411,7 @@ class WKWebView(ui.View):
         elif level == 'raw':
             print(content)
         else:
-            print(level.upper() + ': ' + str(content))
+            print(level.upper() + ': ' + content)
 
     class Theme:
 
@@ -731,8 +747,8 @@ if __name__ == '__main__':
     r.present() # Use 'panel' if you want to view console in another tab
 
     #v.disable_all()
-    v.load_html(html)
-    #v.load_url('http://omz-software.com/pythonista/',
-    #    no_cache=False, timeout=5)
+    #v.load_html(html)
+    v.load_url('http://omz-software.com/pythonista/',
+        no_cache=False, timeout=5)
     #v.load_url('file://some/local/file.html')
-    v.clear_cache()
+    #v.clear_cache()
