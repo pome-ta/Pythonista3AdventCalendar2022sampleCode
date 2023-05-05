@@ -1,16 +1,15 @@
 #coding: utf-8
-
-# [WKWebView - modern webview for Pythonista](https://gist.github.com/sbbosco/1290f59d79c6963e62bb678f0f05b035)
-
 '''
 WKWebView - modern webview for Pythonista
 modified version of https://github.com/mikaelho/pythonista-webview
 updated for pythonista 3.4 compatibility
 '''
 
+# [WKWebView - modern webview for Pythonista](https://gist.github.com/sbbosco/1290f59d79c6963e62bb678f0f05b035)
+
 __version__ = '1.1'
 
-from objc_util import  *
+from objc_util import *
 import ui, console, webbrowser
 import queue, weakref, ctypes, functools, time, os, json, re
 from types import SimpleNamespace
@@ -411,7 +410,8 @@ class WKWebView(ui.View):
         elif level == 'raw':
             print(content)
         else:
-            print(level.upper() + ': ' + content)
+            #print(level.upper() + ': ' + content)
+            print(level.upper() + ': ' + str(content))
 
     class Theme:
 
